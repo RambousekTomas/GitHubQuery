@@ -9,7 +9,7 @@ repositories belonging to an organization, plus a very simple settings screen.
 
 
 # Estimations:
-1. Project setup                    1h
-2. Navigation with empty pages      1h
+1. Project setup                    1h      RealTime: 30m
+2. Navigation with empty pages      1h      RealTime:  2h
 3. Implement settings screen        1h
 4. Implement Repositories screen    1h
