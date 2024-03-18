@@ -38,5 +38,12 @@ module.exports = {
     "react-native/no-color-literals": "error",
     "react-native/no-raw-text": "error",
     "react-native/no-single-element-style-arrays": "error",
+    "no-restricted-imports": ["error", {
+      "paths": [{
+        "name": "react-native",
+        "importNames": ["Text"],
+        "message": "Please import the custom Text component instead of the one from React Native."
+      }]
+    }],
   },
 };
