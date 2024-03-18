@@ -16,8 +16,9 @@ repositories belonging to an organization, plus a very simple settings screen.
 
 # Comments:
 It took me a little bit longer to play around with components design and search functionality of repositories.
+Developed on Android, but solution does not include custom native code, so it should also work on iOS.
 
-What to add into production app:
+## What to add into production app:
 1. Add unit tests
 2. Logging
 3. CI/CD pipelines
