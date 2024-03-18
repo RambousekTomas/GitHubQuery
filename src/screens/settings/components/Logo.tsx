@@ -7,7 +7,7 @@ import { Text } from '../../../components/text/Text'
 import { colors } from '../../../styles'
 
 export const Logo = () => {
-  const [assets] = useAssets([require('../../../../assets/vacasa-logo.png')])
+  const [assets] = useAssets([require('../../../../assets/vacasa-logo2.png')])
 
   return (
     <View style={styles.container}>
@@ -38,5 +38,6 @@ const styles = StyleSheet.create({
   image: {
     width: 60,
     height: 60,
+    borderRadius: 30,
   },
 })

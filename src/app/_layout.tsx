@@ -16,6 +16,9 @@ export default function AppLayout() {
             paddingTop: 4,
             paddingBottom: 4,
           },
+          headerStyle: {
+            elevation: 8,
+          },
         }}>
         <Tabs.Screen
           name="index"
