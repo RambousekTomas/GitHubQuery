@@ -1,8 +1,14 @@
-import { PropsWithChildren } from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleProp, StyleSheet, View, ViewStyle } from 'react-native'
 
-export const Layout = ({ children }: PropsWithChildren) => {
-  return <View style={styles.container}>{children}</View>
+type LayoutProps = {
+  children: React.ReactNode
+  style?: StyleProp<ViewStyle>
+}
+
+export const Layout = ({ children, style }: LayoutProps) => {
+  const mergedStyle = [styles.container, style]
+
+  return <View style={mergedStyle}>{children}</View>
 }
 
 const styles = StyleSheet.create({

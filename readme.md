@@ -11,12 +11,14 @@ repositories belonging to an organization, plus a very simple settings screen.
 # Estimations:
 1. Project setup                    1h      RealTime: 30m
 2. Navigation with empty pages      1h      RealTime:  2h
-3. Implement settings screen        1h   
-4. Implement Repositories screen    1h
+3. Implement settings screen        1h      RealTime:  1h
+4. Implement Repositories screen    1h      RealTime:  3h 
 
+# Comments:
+It took me a little bit longer to play around with components design and search functionality of repositories.
 
 What to add into production app:
-1. Logging
-2. Internationalization library like i18n
+1. Add unit tests
+2. Logging
 3. CI/CD pipelines
-4. 
+4. Internationalization library like i18n
