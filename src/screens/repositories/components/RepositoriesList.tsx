@@ -3,8 +3,8 @@ import { useQuery } from '@tanstack/react-query'
 import { isNotEmpty } from 'ramda-adjunct'
 import { StyleSheet } from 'react-native'
 
+import { RepositoryListCard } from './RepositoryListCard'
 import { fetchOrganizationRepositories } from '../../../api/Requests'
-import { Card } from '../../../components/card/Card'
 import Spinner from '../../../components/spinner/Spinner'
 import { Text } from '../../../components/text/Text'
 import { Repository } from '../../../types/Types'
@@ -29,19 +29,13 @@ export const RepositoriesList = ({ organizationName }: RepositoriesListProps) =>
       keyExtractor={keyExtractor}
       ListFooterComponent={<Spinner animating={isFetching} size={40} />}
       ListEmptyComponent={isFetching ? null : <ListEmptyComponent />}
+      estimatedItemSize={100}
     />
   )
 }
 
 const renderItem = ({ item: repository }: ListRenderItemInfo<Repository>) => {
-  return (
-    <Card style={styles.renderItemStyle}>
-      <Text variant="title">{repository.name}</Text>
-      <Text variant="body" numberOfLines={3} ellipsizeMode="tail">
-        {repository.description}
-      </Text>
-    </Card>
-  )
+  return <RepositoryListCard repository={repository} />
 }
 
 const ListEmptyComponent = () => {
@@ -58,8 +52,5 @@ const styles = StyleSheet.create({
   listEmptyText: {
     textAlign: 'center',
     paddingVertical: 8,
-  },
-  renderItemStyle: {
-    marginVertical: 4,
   },
 })
